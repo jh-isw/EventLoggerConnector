@@ -30,10 +30,10 @@ namespace EventLoggerConnector
             var msg = new Message()
             {
                 EventClass = evtObj.EventClass,
-                EventId = evtObj.EventId,
+                EventId = unchecked( (int) evtObj.EventId),
                 Text = evtObj.GetText(_langId),
-                Time = evtObj.TimeRaised,
-                SourceId = evtObj.SourceId,
+                TimeRaised = evtObj.TimeRaised,
+                SourceId = unchecked( (int) evtObj.SourceId),
                 SourceName = evtObj.SourceName
             };
             _sink.OnMessage(msg);

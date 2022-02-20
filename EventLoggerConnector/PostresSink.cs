@@ -13,7 +13,8 @@ namespace EventLoggerConnector
         public void OnMessage(Message msg)
         {
             _context?.Messages.Add(msg);
-            _context?.SaveChanges();
+            var ret = _context?.SaveChanges();
+            Console.WriteLine($"{ret} entries written.");
         }
 
         public void Dispose()

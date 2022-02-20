@@ -14,9 +14,9 @@ namespace EventLoggerConnector
 
         protected override void OnModelCreating(DbModelBuilder modelBuilder)
         {
-            modelBuilder.Entity<Message>();
-
             base.OnModelCreating(modelBuilder);
+
+            modelBuilder.Entity<Message>().HasKey(m => new { m.TimeRaised, m.EventClass, m.EventId, m.SourceId });
         }
     }
 }

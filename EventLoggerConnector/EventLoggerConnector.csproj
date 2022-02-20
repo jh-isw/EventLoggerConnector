@@ -94,9 +94,9 @@
     <Compile Include="EventsDbContext.cs" />
     <Compile Include="IEventSink.cs" />
     <Compile Include="Message.cs" />
-    <Compile Include="Migrations\202202011919142_Initial.cs" />
-    <Compile Include="Migrations\202202011919142_Initial.designer.cs">
-      <DependentUpon>202202011919142_Initial.cs</DependentUpon>
+    <Compile Include="Migrations\202202201059587_Initial.cs" />
+    <Compile Include="Migrations\202202201059587_Initial.designer.cs">
+      <DependentUpon>202202201059587_Initial.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="PostresSink.cs" />
@@ -120,8 +120,8 @@
     </COMReference>
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\202202011919142_Initial.resx">
-      <DependentUpon>202202011919142_Initial.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\202202201059587_Initial.resx">
+      <DependentUpon>202202201059587_Initial.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

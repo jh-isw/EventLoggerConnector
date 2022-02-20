@@ -13,7 +13,7 @@ namespace EventLoggerConnector.Migrations
         
         string IMigrationMetadata.Id
         {
-            get { return "202202011919142_Initial"; }
+            get { return "202202201059587_Initial"; }
         }
         
         string IMigrationMetadata.Source

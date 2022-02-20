@@ -11,13 +11,14 @@
                 "dbo.Messages",
                 c => new
                     {
-                        Id = c.Int(nullable: false, identity: true),
+                        TimeRaised = c.DateTime(nullable: false),
                         EventClass = c.Guid(nullable: false),
+                        EventId = c.Int(nullable: false),
+                        SourceId = c.Int(nullable: false),
                         Text = c.String(),
-                        Time = c.DateTime(nullable: false),
                         SourceName = c.String(),
                     })
-                .PrimaryKey(t => t.Id);
+                .PrimaryKey(t => new { t.TimeRaised, t.EventClass, t.EventId, t.SourceId });
             
         }
         
