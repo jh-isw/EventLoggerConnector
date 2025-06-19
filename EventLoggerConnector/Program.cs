@@ -28,6 +28,8 @@ namespace EventLoggerConnector
 
             connector.Connect();
 
+            Console.WriteLine(connector.IsConnected ? "Connected." : "NOT Connected!");
+
             Console.WriteLine("Press Enter to exit.");
             Console.ReadKey();
 

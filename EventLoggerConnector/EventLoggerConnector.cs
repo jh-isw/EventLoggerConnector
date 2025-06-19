@@ -13,6 +13,8 @@ namespace EventLoggerConnector
         private int _langId;
         private TcEventLogger _logger;
 
+        public bool IsConnected { get => _logger.IsConnected; }
+
         public EventLoggerConnector(IEventSink sink, int langId = 1033)
         {
             _sink = sink;
