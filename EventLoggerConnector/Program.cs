@@ -11,17 +11,27 @@ namespace EventLoggerConnector
         private const int LangId = 1031;
         static void Main(string[] args)
         {
-            using(var sink = new PostresSink())
-            {
-                var connector = new EventLoggerConnector(sink, LangId);
+            //using(var sink = new PostresSink())
+            //{
+            //    var connector = new EventLoggerConnector(sink, LangId);
 
-                connector.Connect();
+            //    connector.Connect();
 
-                Console.WriteLine("Press Enter to exit.");
-                Console.ReadKey();
+            //    Console.WriteLine("Press Enter to exit.");
+            //    Console.ReadKey();
 
-                connector.Disconnect();
-            }
+            //    connector.Disconnect();
+            //}
+
+            var sink = new ConsoleSink();
+            var connector = new EventLoggerConnector(sink, LangId);
+
+            connector.Connect();
+
+            Console.WriteLine("Press Enter to exit.");
+            Console.ReadKey();
+
+            connector.Disconnect();
         }
     }
 }

@@ -93,6 +93,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="ConsoleSink.cs" />
     <Compile Include="EventLoggerConnector.cs" />
     <Compile Include="EventsDbConfiguration.cs" />
     <Compile Include="EventsDbContext.cs" />
